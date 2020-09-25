@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilo da página css-->
+    <link rel="stylesheet" href="style.css">
+    <!--icone na aba do navegador-->
+    <link rel="shortcut icon" href="imagem/iconsham.png" type="image/x-icon">
+    <title>MNBURGUER</title>
+</head>
+
+<body>
+    <!--CABEÇALHO MENU-->
+    <div class="header">
+        <div class="container">
+            <div class="title-header">
+                <span>_______________________________</span>
+                <img src="imagem/logotipo2.PNG">
+                <span>_______________________________</span>
+
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="produto.html">PRODUTO</a></li>
+                    <li><a href="equipe.html">EQUIPE</a></li>
+                    <li class="current"><a href="login.html">LOGIN</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Login e Cadastro-->
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="loginn()">Login</button>
+                <button type="button" class="toggle-btn" onclick="cadastroo()">Registre-se</button>
+            </div>
+            <!--Redes Sociais-->
+            <div class="social-icons">
+                <ul>
+                    <a href="https://pt-br.facebook.com/"><img src="imagem/fb.png"></a>
+                    <a href="https://twitter.com/login?lang=pt"><img src="imagem/tw.png"></a>
+                    <a href="https://mail.google.com/"><img src="imagem/gmail.png"></a>
+                </ul>
+            </div>
+            <!--Login-->
+            <form id="login" class="input-group">
+                <input id="email1" type="text" class="input-field" placeholder="Digite seu E-mail" required>
+                <input type="password" id="senha1" class="input-field" placeholder="Digite sua Senha" required><br>
+                <a href="dashboard.html"><button onclick="entrar()" id="botaozinhoEntrar"  type="submit" class="submit-btn">Entrar</button></a>
+                <a href="esqueciSenha.html">Esqueceu a senha?</a>
+            </form>
+            <!--Cadastro-->
+            <form id="cadastro" class="input-group">
+                <input id="nomesobrenome" type="text" class="input-field" placeholder="Digite seu Nome">
+                <input id="tel" type="text" class="input-field" placeholder="Digite o seu celular">
+                <input id=email2 type="text" class="input-field" placeholder="Digite seu E-mail" required><br>
+                <input type="password" id="senha2" class="input-field" placeholder="Digite sua Senha" required><br>
+                <a href="contatoPerfil.html"><button onclick="registrar()"type="submit" id="botaozinho" class="submit-btn"> Registre-se</button></a>
+             
+
+            </form>
+        </div>
+    </div>
+
+    <!--rodapé-->
+    <div class="footer">
+        <p>Feito Por MNBURGUER, Copyright &copy; 2020</p>
+    </div>
+</body>
+
+</html>
+<script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("cadastro");
+    var z = document.getElementById("btn");
+
+    function cadastroo() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }
+    function loginn() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+    }
+    function registrar(){
+     window.location.href="contatoPerfil.html";
+    }
+
+    function  entrar(){
+        window.location.href="dashboard.html";
+
+    }
+
+</script>
